@@ -66,12 +66,17 @@ public abstract class FBConnectionActivity extends Activity {
             Long expires = sharedPrefs.getLong("access_expires", -1);
             Log.d(TAG, access_token);
 
+            System.out.println("Session Token: " + access_token);
+            
             if (access_token != null && expires != -1) {
                     mFacebook.setAccessToken(access_token);
                     mFacebook.setAccessExpires(expires);
             }
             return mFacebook.isSessionValid();
     }
+    
+    
+    
 
     private class LoginDialogListener implements DialogListener {
 
