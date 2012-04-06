@@ -26,13 +26,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public abstract class FBConnectionActivity extends Activity {
-    public static final String TAG = "FACEBOOK";
+    
+	public static final String TAG = "FACEBOOK";
     private Facebook mFacebook;
-    public static final String APP_ID = "389992591018483";
+    public static final String APP_ID = "389992591018483";  										// ID de l'aplicació
     private AsyncFacebookRunner mAsyncRunner;
-    private static final String[] PERMS = new String[] { "read_stream" };
+    private static final String[] PERMS = new String[] { "read_stream" }; 					// Permissos de l'aplicació
     private SharedPreferences sharedPrefs;
     private Context mContext;
+    private static String tokenUser = "";																			// Token de l'usuari
 
     private TextView username;
     private ProgressBar pb;
@@ -59,31 +61,34 @@ public abstract class FBConnectionActivity extends Activity {
                     mFacebook.authorize(this, PERMS, new LoginDialogListener());
             }
     }
+    
+    public String getToken() {
+    	if(isSession()) {
+    		return tokenUser;
+    	}
+    	return "";
+    }
 
     public boolean isSession() {
             sharedPrefs = PreferenceManager.getDefaultSharedPreferences(mContext);
-            String access_token = sharedPrefs.getString("access_token", "x");
+            tokenUser = sharedPrefs.getString("access_token", "x");
             Long expires = sharedPrefs.getLong("access_expires", -1);
-            Log.d(TAG, access_token);
+            Log.d(TAG, tokenUser);
 
-            System.out.println("Session Token: " + access_token);
+            System.out.println("Session Token: " + tokenUser);
             
-            if (access_token != null && expires != -1) {
-                    mFacebook.setAccessToken(access_token);
+            if (tokenUser != null && expires != -1) {
+                    mFacebook.setAccessToken(tokenUser);
                     mFacebook.setAccessExpires(expires);
             }
             return mFacebook.isSessionValid();
     }
-    
-    
-    
 
     private class LoginDialogListener implements DialogListener {
 
             @Override
             public void onComplete(Bundle values) {
             	System.out.println("Login complete");
-            	
             	
                     Log.d(TAG, "LoginONComplete");
                     String token = mFacebook.getAccessToken();
@@ -130,7 +135,6 @@ public abstract class FBConnectionActivity extends Activity {
                                     public void run() {
                                             username.setText("Welcome: " + name+"\n ID: "+id);
                                             pb.setVisibility(ProgressBar.GONE);
-
                                     }
                             });
                     } catch (JSONException e) {
