@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hello" />
+
+    <com.mapquest.android.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="318dp"
+        android:layout_height="346dp"
+        android:layout_weight="0.51"
+        android:apiKey="Fmjtd%7Cluua2q6znl%2C22%3Do5-hz8ll "
+        android:clickable="true" >
+    </com.mapquest.android.maps.MapView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Point1" />
+
+        <Button
+            android:id="@+id/_left1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--" />
+        
+        
+        <Button
+            android:id="@+id/_right1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-->" />
+
+        <Button
+            android:id="@+id/_up1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="^" />
+
+        <Button
+            android:id="@+id/_down1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v" />
+
+    </LinearLayout>
+        <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Point2" />
+
+        <Button
+            android:id="@+id/_left2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--" />
+
+        <Button
+            android:id="@+id/_right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-->" />
+
+        <Button
+            android:id="@+id/_up2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="^" />
+
+        <Button
+            android:id="@+id/_down2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="v" />
+
+    </LinearLayout>
+
+</LinearLayout>
