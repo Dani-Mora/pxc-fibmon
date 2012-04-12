@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, PokemonMapsActivity!</string>
     <string name="app_name">PokemonMaps</string>
+    <string name="Galeria">Galeria</string>
 
 </resources>

@@ -33,13 +33,15 @@ public class PokemonMapsActivity extends MapActivity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
-      setContentView(R.layout.main);
+      
+      setContentView(R.layout.galery);
+      /*setContentView(R.layout.main);
       
       setupMapView();
       setupMyLocation();
       showDrawableOverlay();      
       
-     setupButtons(); 
+     setupButtons(); */
     }
 
 	public void setupButtons() {
@@ -151,7 +153,6 @@ public class PokemonMapsActivity extends MapActivity {
       this.myLocationOverlay = new MyLocationOverlay(this, map);
       myLocationOverlay.enableMyLocation();
       myLocationOverlay.runOnFirstFix(new Runnable() {
-        @Override
         public void run() {
           GeoPoint currentLocation = myLocationOverlay.getMyLocation();
           //map.getController().animateTo(currentLocation);
