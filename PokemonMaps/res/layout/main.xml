@@ -57,41 +57,40 @@
             android:text="v" />
 
     </LinearLayout>
-        <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+    <LinearLayout
+       android:id="@+id/linearLayout2"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" >
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Point2" />
+       <TextView
+           android:id="@+id/textView3"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Point2" />
 
-        <Button
-            android:id="@+id/_left2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="--" />
+       <Button
+           android:id="@+id/_left2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="--" />
 
-        <Button
-            android:id="@+id/_right2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-->" />
+       <Button
+           android:id="@+id/_right2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="-->" />
 
-        <Button
-            android:id="@+id/_up2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="^" />
+       <Button
+           android:id="@+id/_up2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="^" />
 
-        <Button
-            android:id="@+id/_down2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="v" />
-
+       <Button
+           android:id="@+id/_down2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="v" />
     </LinearLayout>
 
 </LinearLayout>
