@@ -34,14 +34,14 @@ public class PokemonMapsActivity extends MapActivity {
     public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
       
-      setContentView(R.layout.galery);
-      /*setContentView(R.layout.main);
+      //setContentView(R.layout.galery);
+      setContentView(R.layout.main);
       
       setupMapView();
       setupMyLocation();
       showDrawableOverlay();      
       
-     setupButtons(); */
+     setupButtons();
     }
 
 	public void setupButtons() {
