@@ -18,6 +18,8 @@ import com.mapquest.android.maps.Overlay;
 
 public class PokemonMapsActivity extends MapActivity {
    
+	public static int _indexPokemon = -1;
+	
 	protected MapView map;
     private MyLocationOverlay myLocationOverlay;
 	
@@ -33,7 +35,6 @@ public class PokemonMapsActivity extends MapActivity {
 	@Override
     public void onCreate(Bundle savedInstanceState) {
       super.onCreate(savedInstanceState);
-      
       //setContentView(R.layout.galery);
       setContentView(R.layout.main);
       
@@ -151,6 +152,13 @@ public class PokemonMapsActivity extends MapActivity {
     // set up a MyLocationOverlay and execute the runnable once we have a location fix 
     private void setupMyLocation() {
       this.myLocationOverlay = new MyLocationOverlay(this, map);
+      try {
+    	  if(_indexPokemon >= 0) myLocationOverlay.setMarker(getResources().getDrawable(_indexPokemon), MyLocationOverlay.CENTER_HORIZONTAL);
+      }
+      catch(Exception e) {
+    	  System.out.println("Error: " + e.getMessage());
+      }
+      
       myLocationOverlay.enableMyLocation();
       myLocationOverlay.runOnFirstFix(new Runnable() {
         public void run() {
