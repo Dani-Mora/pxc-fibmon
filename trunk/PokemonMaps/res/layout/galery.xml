@@ -131,11 +131,17 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
     </LinearLayout>
-
+
     <Gallery
         android:id="@+id/_galeria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.16" />
+        android:layout_weight="0.04" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select this pokemon" />
 
 </LinearLayout>
